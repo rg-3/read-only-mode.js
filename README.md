@@ -43,4 +43,4 @@ This extension isn't on any webstores (yet).
 
 ## <a id='source'>License</a>
 
-The MIT License, see [./src/LICENSE.txt](./src/LICENSE.txt) for details.F
+The MIT License, see [./src/LICENSE.txt](./src/LICENSE.txt) for details.
