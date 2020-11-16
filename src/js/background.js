@@ -7,7 +7,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       sendResponse(app.enabled);
       break;
     default:
-      throw new Error(``)
+      throw new Error(`No handler for the request "${request}"`)
       break;
   }
 });
