@@ -1,10 +1,10 @@
 {
   "manifest_version": 2,
   "name": "Read Only Mode",
-  "description": "A browser extension that enables a read-only mode on the Twitter website where you cannot author tweets or replies.",
+  "description": "A browser extension that modifies the Twitter website to have a read only mode, where you can't author tweets or replies.",
   "version": "0.1.0",
   "permissions": [],
-  "icons": {"16": "images/icon16.png", "48": "images/icon48.png", "128": "images/icon128.png"},
+  "icons": {"128": "images/icon128.png"},
   "background": {"page": "html/background.html"},
   "content_scripts": [
     {
