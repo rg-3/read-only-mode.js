@@ -38,6 +38,15 @@ This extension isn't on any webstores (yet).
 
 * Done.
 
+## <a id='dependencies'> Dependencies </a>
+
+**Runtime dependencies**
+
+Dependencies used while the extension is running:
+
+* [Spectre.css](https://picturepan2.github.io/spectre/)  
+  A Lightweight, Responsive and Modern CSS Framework.
+  
 ## Thanks
 
 Thanks to [icon king1](https://freeicons.io/profile/3) from 
