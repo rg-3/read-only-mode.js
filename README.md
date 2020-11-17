@@ -1,5 +1,11 @@
 # read-only-mode.js
 
+<p align="center">
+  <img src="/src/images/icon128.png" alt="logo">
+  <br>
+  <b>Read Only Mode</b>
+</p>
+
 **Table of contents**
 
 * <a href='#introduction'>Introduction</a>
@@ -46,7 +52,7 @@ Dependencies used while the extension is running:
 
 * [Spectre.css](https://picturepan2.github.io/spectre/)  
   A Lightweight, Responsive and Modern CSS Framework.
-  
+
 ## Thanks
 
 Thanks to [icon king1](https://freeicons.io/profile/3) from 
