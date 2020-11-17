@@ -16,7 +16,9 @@
 ## <a id='introduction'>Introduction</a>
 
 A browser extension that modifies the Twitter website to have a read 
-only mode, where you can't author tweets or replies.
+only mode, where you can't author tweets or replies but you can 
+still quote tweet, retweet and like tweets. The mode can be enabled 
+or disabled through the extension's UI.
 
 ## What's the idea behind this extension ?
 
