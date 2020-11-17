@@ -9,16 +9,13 @@
 
 ## <a id='introduction'>Introduction</a>
 
-read-only-mode.js is a browser extension that enables a read-only mode 
-on the Twitter website where you cannot author tweets or replies.
+A browser extension that modifies the Twitter website to have a read 
+only mode, where you can't author tweets or replies.
 
 ## What's the idea behind this extension ?
 
-This browser extension intends to make you think twice before authoring a 
-tweet or reply and to boost your productivity by encouraging you to 
-listen more than you talk (or read more than you write). I've found the 
-extension helps me to get the most out of Twitter, and maybe it can help 
-you too.
+The idea behind this extension is to encourage you to spend more time 
+reading and learning and less time engaging in Twitter debates. 
 
 ## <a id='install'> Install </a>
 
@@ -40,6 +37,12 @@ This extension isn't on any webstores (yet).
   the `src/` directory in the cloned repository.
 
 * Done.
+
+## Thanks
+
+Thanks to [icon king1](https://freeicons.io/profile/3) from 
+[freeicons.io](https://freeicons.io) for authoring the 
+extension's icon.
 
 ## <a id='source'>License</a>
 
