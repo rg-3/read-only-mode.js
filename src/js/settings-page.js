@@ -16,6 +16,6 @@ const enable = (app, btn) => {
 
 chrome.runtime.getBackgroundPage(function(page) {
   const app = page.app;
-  const btn = document.querySelector('.btn');
+  const btn = document.getElementById('toggle-enable-btn');
   app.enabled ? enable(app, btn) : disable(app, btn);
 });
