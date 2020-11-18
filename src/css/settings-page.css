@@ -12,3 +12,7 @@
 p {
   font-size: 13px;
 }
+
+.btn-error {
+  background-color: #FF0000 !important;
+}
