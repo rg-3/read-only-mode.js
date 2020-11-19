@@ -1,4 +1,4 @@
-const hide = (els) => {
+const setDisplayNone = (els) => {
   for(let i = 0; i < els.length; i++) {
     const el = els[i];
     el.setAttribute('data-read-only-mode-hidden', '1')
@@ -18,7 +18,7 @@ chrome.runtime.sendMessage("IsEnabled", (isEnabled) => {
   if(!isEnabled) { return; }
   setInterval(() => {
     removeComposeArea();
-    hide(document.querySelectorAll('a:not([data-read-only-mode-hidden="1"])[href="/compose/tweet"]'));
-    hide(document.querySelectorAll('div:not([data-read-only-mode-hidden="1"])[data-testid="reply"]'));
+    setDisplayNone(document.querySelectorAll('a:not([data-read-only-mode-hidden="1"])[href="/compose/tweet"]'));
+    setDisplayNone(document.querySelectorAll('div:not([data-read-only-mode-hidden="1"])[data-testid="reply"]'));
   }, 250);
 });
