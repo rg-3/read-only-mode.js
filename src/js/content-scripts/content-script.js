@@ -2,7 +2,7 @@ const setDisplayNone = (els) => {
   for(let i = 0; i < els.length; i++) {
     const el = els[i];
     if(!el) { continue; }
-    el.setAttribute('data-read-only-mode-hidden', '1')
+    el.setAttribute('data-read-only-mode-hidden', '1');
     el.style.display = 'none';
   }
 };
