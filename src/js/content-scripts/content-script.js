@@ -1,7 +1,7 @@
 const hide = (els) => {
   for(let i = 0; i < els.length; i++) {
     const el = els[i];
-    el.setAttribute('data-read-mode-hidden', '1')
+    el.setAttribute('data-read-only-mode-hidden', '1')
     el.style.display = 'none';
   }
 };
@@ -18,7 +18,7 @@ chrome.runtime.sendMessage("IsEnabled", (isEnabled) => {
   if(!isEnabled) { return; }
   setInterval(() => {
     removeComposeArea();
-    hide(document.querySelectorAll('a:not([data-read-mode-hidden="1"])[href="/compose/tweet"]'));
-    hide(document.querySelectorAll('div:not([data-read-mode-hidden="1"])[data-testid="reply"]'));
+    hide(document.querySelectorAll('a:not([data-read-only-mode-hidden="1"])[href="/compose/tweet"]'));
+    hide(document.querySelectorAll('div:not([data-read-only-mode-hidden="1"])[data-testid="reply"]'));
   }, 250);
 });
