@@ -12,7 +12,7 @@ chrome.runtime.sendMessage("IsEnabled", (isEnabled) => {
   setInterval(() => {
     /* Remove the compose area */
     setDisplayNone([document.querySelector('div[data-testid="primaryColumn"] div[role="progressbar"]')?.parentElement]);
-    setDisplayNone(document.querySelectorAll('div[data-testid="primaryColumn"] .css-1dbjc4n .r-1u4rsef:not([data-read-only-mode="1"])'));
+    setDisplayNone([...document.querySelectorAll('div[data-testid="primaryColumn"] div:nth-child(1) div:nth-child(3)')].slice(0, 3));
     /* Remove the compose tweet button */
     setDisplayNone(document.querySelectorAll('a:not([data-read-only-mode="1"])[href="/compose/tweet"]'));
     /* Remove reply icon */
