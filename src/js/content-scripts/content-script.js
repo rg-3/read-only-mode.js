@@ -1,6 +1,6 @@
 const stylesheet = `
   div[data-testid="tweet"] div[role="group"] {
-    right: 20px;
+    right: 10px;
   }
 
   article div[role="group"] {
