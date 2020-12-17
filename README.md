@@ -16,14 +16,14 @@
 ## <a id='introduction'>Introduction</a>
 
 Read Only Mode is a Chrome extension modifies the Twitter website 
-to have a read  only mode, where you can't author tweets, retweets 
+to have a read only mode, where you can't author tweets, retweets 
 or replies but you can still like tweets. The mode can be enabled 
 or disabled through the extension's UI.
 
 ## What's the idea behind this extension ?
 
 The idea behind this extension is to encourage you to use Twitter 
-as a source information rather than as a tool to engage in debate.
+as a source of information rather than as a tool to engage in debate.
 
 ## <a id='install'> Install </a>
 
