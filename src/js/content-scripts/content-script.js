@@ -16,5 +16,7 @@ chrome.runtime.sendMessage("IsEnabled", (isEnabled) => {
     setDisplayNone(document.querySelectorAll('a:not([data-read-only-mode="1"])[href="/compose/tweet"]'));
     /* Remove reply icon */
     setDisplayNone(document.querySelectorAll('div:not([data-read-only-mode="1"])[data-testid="reply"]'));
+    /* Remove retweet icon */
+    setDisplayNone(document.querySelectorAll('div:not([data-read-only-mode="1"])[data-testid="retweet"]'));
   }, 250);
 });
