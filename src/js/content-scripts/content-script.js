@@ -1,3 +1,16 @@
+const stylesheet = `
+  div[data-testid="tweet"] div[role="group"] {
+    right: 20px;
+  }
+
+  article div[role="group"] {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 15px;
+    justify-content: center;
+  }
+`;
+
 const setDisplayNone = (els) => {
   for(let i = 0; i < els.length; i++) {
     const el = els[i];
@@ -19,4 +32,9 @@ chrome.runtime.sendMessage("IsEnabled", (isEnabled) => {
     /* Remove retweet icon */
     setDisplayNone(document.querySelectorAll('div:not([data-read-only-mode="1"])[data-testid="retweet"]'));
   }, 250);
+
+  const el = document.createElement('style');
+  el.setAttribute('type', 'text/css')
+  el.innerText = stylesheet;
+  document.head.appendChild(el);
 });
