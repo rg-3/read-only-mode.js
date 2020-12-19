@@ -1,9 +1,9 @@
-# read-only-mode.js
+# ROM.js
 
 <p align="center">
   <img src="/src/images/icon128.png" alt="logo">
   <br>
-  <b>Read Only Mode</b>
+  <b>ROM.js</b>
 </p>
 
 **Table of contents**
@@ -15,10 +15,10 @@
 
 ## <a id='introduction'>Introduction</a>
 
-Read Only Mode is a Chrome extension modifies the Twitter website 
-to have a read only mode, where you can't author tweets, retweets 
-or replies but you can still like tweets. The mode can be enabled 
-or disabled through the extension's UI.
+ROM.js is a Chrome extension modifies the Twitter website 
+to have a **R**ead **O**nly **M**ode, where you can't author tweets,
+retweets or replies but you can still like tweets. The mode can be 
+enabled or disabled through the extension's UI.
 
 ## What's the idea behind this extension ?
 
@@ -35,7 +35,7 @@ This extension isn't on any webstores (yet).
 
  * Clone a copy of the extension:
 
-      git clone https://github.com/rg-3/read-only-mode.js
+       git clone https://github.com/rg-3/rom.js
 
 * Open `chrome://extensions` in your browser.
 
