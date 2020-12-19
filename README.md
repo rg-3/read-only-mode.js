@@ -9,7 +9,7 @@
 **Table of contents**
 
 * <a href='#introduction'>Introduction</a>
-* <a href='#the-idea'>What's the idea behind this extension ?</a>
+* <a href='#the-idea'>The idea</a>
 * <a href='#install'>Install</a>
 * <a href='#license'>License</a>
 
@@ -17,12 +17,12 @@
 
 ROM.js is a Chrome extension modifies the Twitter website 
 to have a **R**ead **O**nly **M**ode, where you can't author tweets,
-retweets or replies but you can still like tweets. The mode can be 
-enabled or disabled through the extension's UI.
+retweets or replies. The mode can be enabled or disabled through the 
+extension's UI.
 
-## What's the idea behind this extension ?
+## The idea
 
-The idea behind this extension is to encourage you to use Twitter 
+The idea beind this extension is to encourage you to use Twitter 
 as a source of information rather than as a tool to engage in debate.
 
 ## <a id='install'> Install </a>
