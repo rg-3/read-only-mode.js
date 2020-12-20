@@ -3,7 +3,7 @@
 <p align="center">
   <img src="/src/images/icon128.png" alt="logo">
   <br>
-  <b>ROM.js</b>
+  <b>R</b>ead <b>O</b>nly <b>M</b>ode
 </p>
 
 **Table of contents**
@@ -15,10 +15,10 @@
 
 ## <a id='introduction'>Introduction</a>
 
-ROM.js is a Chrome extension modifies the Twitter website 
-to have a **R**ead **O**nly **M**ode, where you can't author tweets,
-retweets or replies. The mode can be enabled or disabled through the 
-extension's UI.
+**R**ead **O**nly **M**ode is a Chrome extension that modifies the 
+Twitter website to have a read only mode, where you can't author 
+tweets, retweets or replies. The mode can be enabled or disabled 
+through the extension's UI.
 
 ## The idea
 
