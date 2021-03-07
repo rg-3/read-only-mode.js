@@ -7,21 +7,48 @@
   </head>
   <body>
     <div class="container">
-      <div class="text-center">
-        <img src="/images/icon128.png">
+      <div class="columns icon-container">
+        <div class="column col-12 text-center">
+          <img src=/images/icon.svg width=60 height=60>
+        </div>
       </div>
-      <div class="text-center">
-        Read Only Mode
+      <div class="columns">
+        <div class="column col-12">
+          <mark>Tweet features</mark>
+        </div>
       </div>
-      <p class="mt-2">
-        Read Only Mode modifies the Twitter website to have a read
-        only mode, where you can't author tweets or replies.
-        <a target="_blank" rel="noopener" href="https://github.com/rg-3/read-only-mode.js/issues/new">Report a bug</a>.
-      </p>
-      <div class="text-center">
-        <button id="toggle-enable-btn" class="btn"></button>
+      <div class="columns">
+        <div class="column col-7">
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="replies" data-var-label="Hide reply"></div>
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="retweets" data-var-label="Hide retweet"></div>
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="likes" data-var-label="Hide likes"></div>
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="shareTweet" data-var-label="Hide share tweet"></div>
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="tweetActivity" data-var-label="Hide tweet activity"></div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column col-12">
+          <mark>Count features</mark>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class="column col-6 col-xs-auto">
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="followerCount" data-var-label="Hide follower count"></div>
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="followingCount" data-var-label="Hide following count"></div>
+        </div>
+      </div>
+      <div class="columns">
+        <div class="column col-12">
+          <mark>Author features</mark>
+        </div>
+      </div>
+      <div class='columns'>
+        <div class="column col-6 col-xs-auto">
+          <div data-include-html="/html/blobs/checkbox-switch.html" data-var-id="compose" data-var-label="Hide UI elements for authoring tweets"></div>
+        </div>
       </div>
     </div>
+    <script src="/js/vendor/rstl.min.js"></script>
     <script src="/js/settings-page.js" type="module"></script>
   </body>
 </html>

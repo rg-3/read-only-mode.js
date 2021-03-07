@@ -6,17 +6,18 @@
 .container {
   font-family: "Roboto Regular";
   height: 300px;
-  width: 300px;
+  width: 385px;
 }
 
 p {
   font-size: 14px;
 }
 
-.btn {
-  border-radius: 8px;
+.form-switch input[type='checkbox']:checked + .checkbox-switch {
+  background: #55acee;
+  border-color: #55acee;
 }
 
-.btn-error {
-  background-color: #FF0000 !important;
+.icon-container {
+  height: 80px;
 }

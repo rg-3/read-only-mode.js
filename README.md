@@ -57,10 +57,12 @@ Dependencies used while the extension is running:
 
 ## Thanks
 
-Thanks to [icon king1](https://freeicons.io/profile/3) from 
-[freeicons.io](https://freeicons.io) for authoring the 
-extension's icon.
+Thanks to the following icon authors:
+
+* <a href="https://freeicons.io/profile/823">Muhammad Haq</a> on <a href="https://freeicons.io">freeicons.io</a>
+                                
 
 ## <a id='source'>License</a>
 
 The MIT License, see [./src/LICENSE.txt](./src/LICENSE.txt) for details.
+
