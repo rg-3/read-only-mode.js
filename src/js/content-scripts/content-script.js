@@ -70,6 +70,10 @@ setInterval(() => {
     tag('a[href$="followers"][role="link"] span:first-child', {when: disabled.includes('followerCount'), finder: 'first', tag: 'display-none'});
     /* following count */
     tag('a[href$="following"][role="link"] span:first-child', {when: disabled.includes('followingCount'), finder: 'first', tag: 'display-none'});
+    /* trends */
+    tag('div[aria-label="Timeline: Trending now"]', {when: disabled.includes('trendingNow'), tag: 'display-none'})
+    /* who to follow */
+    tag([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
   });
 }, 250);
 

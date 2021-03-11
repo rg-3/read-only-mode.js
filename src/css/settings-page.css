@@ -9,6 +9,10 @@
   width: 385px;
 }
 
+#settings section {
+  margin-bottom: 20px;
+}
+
 p {
   font-size: 14px;
 }

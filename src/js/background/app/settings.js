@@ -7,7 +7,9 @@ export default function(app) {
     'tweetActivity',
     'followingCount',
     'followerCount'  ,
-    'compose'
+    'compose',
+    'whoToFollow',
+    'trendingNow'
   ]);
 
   this.get = (key) => {
