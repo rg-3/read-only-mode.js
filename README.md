@@ -22,7 +22,7 @@ recommendations, or hide the UI elements for composing a tweet.
 The extension could be used to create a read-only version of the
 Twitter website. Ultimately it is up to you and the settings you
 choose. Setting changes can be seen immediately on the Twitter
-website.
+website without a page reload.
 
 ## <a id='screenshots'>Screenshots</a>
 
