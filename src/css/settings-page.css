@@ -3,20 +3,35 @@
   src: url('/fonts/roboto-regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "ZenDots";
+  src: url('/fonts/zendots-regular.ttf') format('truetype');
+}
+
 .container {
   font-family: "Roboto Regular";
-  height: 300px;
-  width: 300px;
+  height: 400px;
+  width: 385px;
+}
+
+#settings section {
+  margin-bottom: 20px;
 }
 
 p {
   font-size: 14px;
 }
 
-.btn {
-  border-radius: 8px;
+.form-switch input[type='checkbox']:checked + .checkbox-switch {
+  background: #55acee;
+  border-color: #55acee;
 }
 
-.btn-error {
-  background-color: #FF0000 !important;
+#header {
+  margin: 20px 0 0 0;
+  font-family: "ZenDots";
+}
+
+.small {
+  font-size: 10px;
 }

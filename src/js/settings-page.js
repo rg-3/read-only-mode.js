@@ -1,21 +1,20 @@
-const disable = (app, btn) => {
-  btn.classList.remove('btn-error');
-  btn.classList.add('btn-success');
-  btn.innerText = 'Enable';
-  btn.onclick = () => enable(app, btn);
-  app.enabled = false;
-}
+import includeHTML from './vendor/include-html.js';
 
-const enable = (app, btn) => {
-  btn.classList.remove('btn-success');
-  btn.classList.add('btn-error');
-  btn.innerText = 'Disable';
-  btn.onclick = () => disable(app, btn);
-  app.enabled = true;
+const initCheckbox = function(app, index) {
+  const feature = app.settings.keys[index];
+  const input = document.getElementById(feature);
+  if(!input) { return; }
+  input.addEventListener('change', (e) => e.target.checked ? app.settings.disable(feature) : app.settings.enable(feature))
+  input.checked = app.settings.isDisabled(feature);
 };
 
-chrome.runtime.getBackgroundPage(function(page) {
-  const app = page.app;
-  const btn = document.getElementById('toggle-enable-btn');
-  app.enabled ? enable(app, btn) : disable(app, btn);
-});
+const init = function() {
+  includeHTML().then(() => {
+    chrome.runtime.getBackgroundPage(function(page) {
+      const app = page.app;
+      for(let i = 0; i < app.settings.keys.length; i++) { initCheckbox(app, i); }
+    });
+  })
+};
+
+document.addEventListener('DOMContentLoaded', init);
