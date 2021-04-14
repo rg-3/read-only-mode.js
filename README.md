@@ -7,6 +7,7 @@
 **Table of contents**
 
 * <a href='#introduction'>Introduction</a>
+* <a href='#screenshots'>Screenshots</a>
 * <a href='#install'>Install</a>
 * <a href='#license'>License</a>
 
@@ -22,7 +23,7 @@ The extension could be used to create a read-only version of the
 Twitter website. Ultimately it is up to you and the settings you
 choose.
 
-## Screenshots
+## <a id='screenshots'>Screenshots</a>
 
 The following is a screenshot of the extensions' popover. Items that
 are ticked blue are disabled.
