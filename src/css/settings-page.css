@@ -3,9 +3,14 @@
   src: url('/fonts/roboto-regular.ttf') format('truetype');
 }
 
+@font-face {
+  font-family: "ZenDots";
+  src: url('/fonts/zendots-regular.ttf') format('truetype');
+}
+
 .container {
   font-family: "Roboto Regular";
-  height: 300px;
+  height: 400px;
   width: 385px;
 }
 
@@ -22,6 +27,11 @@ p {
   border-color: #55acee;
 }
 
-.icon-container {
-  height: 80px;
+#header {
+  margin: 20px 0 0 0;
+  font-family: "ZenDots";
+}
+
+.small {
+  font-size: 10px;
 }

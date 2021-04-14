@@ -1,9 +1,7 @@
-# twitter-mod.js
-
 <p align="center">
   <img src="/src/images/icon128.png" alt="logo">
   <br>
-  <b>twitter-mod.js</b>
+  <h1 align="center">twitter-mod.js</h1>
 </p>
 
 **Table of contents**
@@ -23,6 +21,15 @@ recommendations, or hide the UI elements for composing a tweet.
 The extension could be used to create a read-only version of the
 Twitter website. Ultimately it is up to you and the settings you
 choose.
+
+## Screenshots
+
+The following is a screenshot of the extensions' popover. Items that
+are ticked blue are disabled.
+
+<p align="center">
+  <img src="/assets/preview-twittermod.png">
+</p>
 
 ## <a id='install'> Install </a>
 
@@ -60,7 +67,7 @@ Credit is due to the following icon authors:
 
 * <a href="https://freeicons.io/profile/823">Muhammad Haq</a> on <a href="https://freeicons.io">freeicons.io</a>
 
-* <a href="https://freeicons.io/profile/3">icon king1</a> on <a href="https://freeicons.io">freeicons.io</a>
+* <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
 
 ## <a id='source'>License</a>
 
