@@ -21,7 +21,8 @@ For example, you can hide the recommended trends and who to follow
 recommendations, or hide the UI elements for composing a tweet.
 The extension could be used to create a read-only version of the
 Twitter website. Ultimately it is up to you and the settings you
-choose.
+choose. Setting changes can be seen immediately on the Twitter
+website.
 
 ## <a id='screenshots'>Screenshots</a>
 
