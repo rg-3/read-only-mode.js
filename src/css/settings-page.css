@@ -28,10 +28,16 @@ label.form-switch {
   cursor: pointer;
 }
 
-#header {
+header {
   font-family: "ZenDots";
+  font-size: 15px;
+  margin: 10px 0 10px 0px;
 }
 
+header a:link, a:visited, a:active, a:hover {
+  color: #3b4351;
+  text-decoration: none;
+}
 
 .small {
   font-size: 10px;
