@@ -24,9 +24,14 @@
   border-color: #55acee;
 }
 
+label.form-switch {
+  cursor: pointer;
+}
+
 #header {
   font-family: "ZenDots";
 }
+
 
 .small {
   font-size: 10px;
