@@ -70,6 +70,8 @@ Credit is due to the following icon authors:
 
 * <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
 
+* <a href="https://freeicons.io/profile/3335">MD Badsha Meah</a> on <a href="https://freeicons.io">freeicons.io</a>
+
 ## <a id='source'>License</a>
 
 The MIT License, see [./src/LICENSE.txt](./src/LICENSE.txt) for details.

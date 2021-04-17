@@ -42,3 +42,11 @@ header a:link, a:visited, a:active, a:hover {
 .small {
   font-size: 10px;
 }
+
+strong.blue {
+  color: #55acee;
+}
+
+section#help span , section#help img {
+  vertical-align: middle;
+}
