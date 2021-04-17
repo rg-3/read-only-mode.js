@@ -26,7 +26,7 @@ website without a page reload.
 ## <a id='screenshots'>Screenshots</a>
 
 The following is a screenshot of the extensions' popover. Items that
-are ticked blue are disabled.
+are checked blue are disabled.
 
 <p align="center">
   <img src="/assets/preview-twittermod.png">
@@ -42,7 +42,7 @@ This extension isn't on any webstores (yet).
 
  * Clone a copy of the extension:
 
-       git clone https://github.com/rg-3/rom.js
+       git clone https://github.com/rg-3/twitter-mod.js
 
 * Open `chrome://extensions` in your browser.
 
