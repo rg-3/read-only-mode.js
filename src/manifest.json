@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
-  "name": "Read Only Mode",
-  "description": "twitter-mod.js is an extension for Chromium-derived (eg Chrome) browsers. The extension can enable or disable certain features on the Twitter website.",
+  "name": "twitter-mod",
+  "description": "Modify your Twitter experience",
   "version": "0.1.0",
   "permissions": [],
   "icons": {"128": "images/icon128.png"},
