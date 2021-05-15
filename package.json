@@ -1,0 +1,13 @@
+{
+  "name": "twitter-mod.js",
+  "version": "0.1.0",
+  "repository": "git@github.com:rg-3/twitter-mod.js.git",
+  "author": "rg <1aab@protonmail.com>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "copy-webpack-plugin": "^8.1.1",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}

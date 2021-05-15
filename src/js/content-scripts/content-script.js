@@ -1,3 +1,35 @@
+import toggleHide from './support/toggle-hide.js';
+import hideWhoToFollow from './support/hide-who-to-follow.js';
+import hidePromotedTweet from './support/hide-promoted-tweet.js';
+
+setInterval(() => {
+  chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
+    /* compose */
+    toggleHide([document.querySelector('div[data-testid="primaryColumn"] div[role="progressbar"]')?.parentElement], {when: disabled.includes('compose'), tag: 'display-none'});
+    toggleHide('a[data-testid="SideNav_NewTweet_Button"]', {when: disabled.includes('compose')});
+    /* replies */
+    toggleHide('div[data-testid="reply"]', {when: disabled.includes('replies')});
+    /* likes */
+    toggleHide('div[data-testid="like"]', {when: disabled.includes('likes')})
+    /* retweets */
+    toggleHide('div[data-testid="retweet"]', {when: disabled.includes('retweets')});
+    /* share tweet */
+    toggleHide('div[aria-label="Share Tweet"]', {when: disabled.includes('shareTweet')});
+    /* tweet activity */
+    toggleHide('a[aria-label="View Tweet activity"]', {when: disabled.includes('tweetActivity')});
+    /* follower count */
+    toggleHide('a[href$="followers"][role="link"] span:first-child', {when: disabled.includes('followerCount'), finder: 'first', tag: 'display-none'});
+    /* following count */
+    toggleHide('a[href$="following"][role="link"] span:first-child', {when: disabled.includes('followingCount'), finder: 'first', tag: 'display-none'});
+    /* trends */
+    toggleHide('div[aria-label="Timeline: Trending now"]', {when: disabled.includes('trendingNow'), tag: 'display-none'})
+    /* who to follow */
+    hideWhoToFollow(disabled);
+    /* promoted tweets */
+    hidePromotedTweet(disabled);
+  });
+}, 250);
+
 const stylesheet = `
   [data-twitter-mod-scale-zero="1"] {
     transform: scale(0);
@@ -7,115 +39,6 @@ const stylesheet = `
     display: none !important;
   }
 `;
-
-const tags = {
-  'scale-zero':   'data-twitter-mod-scale-zero',
-  'display-none': 'data-twitter-mod-display-none'
-};
-
-const getFind = (scope) => {
-  let find;
-  if(scope === 'all') { find = document.querySelectorAll.bind(document); }
-  else { find = document.querySelector.bind(document); }
-  return function(selector) {
-    const els = find(selector);
-    if(!els) { return []; }
-    if(scope === 'first') { return [els]; }
-    return els;
-  }
-};
-
-const tag = (els, {when, finder = 'all', tag = 'scale-zero'}) => {
-  tag  = tags[tag];
-  find = getFind(finder);
-  if(when) {
-    if(typeof(els) === 'string') {
-      els = (finder === 'first' ? find(els) : find(`${els}:not([data-twitter-mod="1"])`));
-    }
-    for(let i = 0; i < els.length; i++) {
-      const el = els[i];
-      if(!el || el.getAttribute(tag) === '1') { continue; }
-      el.setAttribute('data-twitter-mod', '1')
-      el.setAttribute(tag, '1');
-    }
-  } else {
-    if(typeof(els) === 'string') {
-      els = find(els);
-    }
-    for(let i = 0; i < els.length; i++) {
-      const el = els[i];
-      if(!el) { continue; }
-      el.removeAttribute('data-twitter-mod');
-      for(let k in tags) { el.removeAttribute(tags[k]) }
-    }
-  }
-};
-
-const hideWhoToFollow = (disabled) => {
-  let spans = Array.from(document.querySelectorAll('span'));
-  spans
-    .filter((el) => ['Who to follow'].includes(el.textContent))
-    .forEach((el) => {
-      let target = el;
-      let targetDepth = 5;
-      for(let i = 0; i < targetDepth; i++) {
-        tag([target], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
-        target = target.parentElement;
-      }
-     });
-  if(['followers', 'following'].filter((path) => document.location.href.endsWith(path)).length === 0) {
-    tag('div[data-testid=UserCell]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
-  }
-  tag([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'});
-  tag('div[data-testid=primaryColumn] a[href^="/i/connect"]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
-}
-
-const hidePromotedTweet = (disabled) => {
-  let spans = Array.from(document.querySelectorAll('span'));
-  spans
-    .filter((el) => el.textContent === "Promoted")
-    .forEach((el) => {
-      tag([el], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
-      tag([el.closest('div[data-testid=tweet')], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
-    });
-  spans
-    .filter((el) => el.textContent === "Promoted Tweet")
-    .forEach((el) => {
-      let target = el;
-      let targetDepth = 5;
-      for(let i = 0; i < targetDepth; i++) {
-        tag([target], {when: disabled.includes('promotedTweet'), tag: 'display-none'})
-        target = target.parentElement;
-      }
-    });
-};
-
-setInterval(() => {
-  chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
-    /* compose */
-    tag([document.querySelector('div[data-testid="primaryColumn"] div[role="progressbar"]')?.parentElement], {when: disabled.includes('compose'), tag: 'display-none'});
-    tag('a[data-testid="SideNav_NewTweet_Button"]', {when: disabled.includes('compose')});
-    /* replies */
-    tag('div[data-testid="reply"]', {when: disabled.includes('replies')});
-    /* likes */
-    tag('div[data-testid="like"]', {when: disabled.includes('likes')})
-    /* retweets */
-    tag('div[data-testid="retweet"]', {when: disabled.includes('retweets')});
-    /* share tweet */
-    tag('div[aria-label="Share Tweet"]', {when: disabled.includes('shareTweet')});
-    /* tweet activity */
-    tag('a[aria-label="View Tweet activity"]', {when: disabled.includes('tweetActivity')});
-    /* follower count */
-    tag('a[href$="followers"][role="link"] span:first-child', {when: disabled.includes('followerCount'), finder: 'first', tag: 'display-none'});
-    /* following count */
-    tag('a[href$="following"][role="link"] span:first-child', {when: disabled.includes('followingCount'), finder: 'first', tag: 'display-none'});
-    /* trends */
-    tag('div[aria-label="Timeline: Trending now"]', {when: disabled.includes('trendingNow'), tag: 'display-none'})
-    /* who to follow */
-    hideWhoToFollow(disabled);
-    hidePromotedTweet(disabled);
-  });
-}, 250);
 
 document.addEventListener('DOMContentLoaded', () => {
   const el = document.createElement('style');
