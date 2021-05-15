@@ -14,7 +14,7 @@
 ## <a id='introduction'>Introduction</a>
 
 twitter-mod.js is an extension for Chromium-derived (eg Chrome) browsers.  
-The extension can enable or disable certain features on the Twitter website.
+The extension can show or hide certain features on the Twitter website.
 
 For example, you can hide the recommended trends and who to follow
 recommendations, or hide the UI elements for composing a tweet.
@@ -26,7 +26,7 @@ website without a page reload.
 ## <a id='screenshots'>Screenshots</a>
 
 The following is a screenshot of the extensions' popover. Items that
-are checked blue are disabled.
+are checked blue are hidden.
 
 <p align="center">
   <img src="/assets/preview-twittermod.png">
