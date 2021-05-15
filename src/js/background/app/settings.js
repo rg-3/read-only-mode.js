@@ -9,7 +9,8 @@ export default function(app) {
     'followerCount'  ,
     'compose',
     'whoToFollow',
-    'trendingNow'
+    'trendingNow',
+    'promotedTweet'
   ]);
 
   this.get = (key) => {

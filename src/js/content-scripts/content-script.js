@@ -59,7 +59,7 @@ const hideWhoToFollow = (disabled) => {
       let target = el;
       let targetDepth = 5;
       for(let i = 0; i < targetDepth; i++) {
-        tag([target.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
+        tag([target], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
         target = target.parentElement;
       }
      });
@@ -69,6 +69,26 @@ const hideWhoToFollow = (disabled) => {
   tag([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'});
   tag('div[data-testid=primaryColumn] a[href^="/i/connect"]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
 }
+
+const hidePromotedTweet = (disabled) => {
+  let spans = Array.from(document.querySelectorAll('span'));
+  spans
+    .filter((el) => el.textContent === "Promoted")
+    .forEach((el) => {
+      tag([el], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
+      tag([el.closest('div[data-testid=tweet')], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
+    });
+  spans
+    .filter((el) => el.textContent === "Promoted Tweet")
+    .forEach((el) => {
+      let target = el;
+      let targetDepth = 5;
+      for(let i = 0; i < targetDepth; i++) {
+        tag([target], {when: disabled.includes('promotedTweet'), tag: 'display-none'})
+        target = target.parentElement;
+      }
+    });
+};
 
 setInterval(() => {
   chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
@@ -93,6 +113,7 @@ setInterval(() => {
     tag('div[aria-label="Timeline: Trending now"]', {when: disabled.includes('trendingNow'), tag: 'display-none'})
     /* who to follow */
     hideWhoToFollow(disabled);
+    hidePromotedTweet(disabled);
   });
 }, 250);
 
