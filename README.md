@@ -13,7 +13,7 @@
 
 ## <a id='introduction'>Introduction</a>
 
-twitter-mod.js is an extension for Chromium-derived (eg Chrome) browsers.  
+twitter-mod.js is an extension for Chromium-derived (eg Chrome) browsers.
 The extension can show or hide certain features on the Twitter website.
 
 For example, you can hide the recommended trends and who to follow
