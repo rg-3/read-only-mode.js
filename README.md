@@ -64,13 +64,14 @@ Dependencies used while the extension is running:
 
 ## Thanks
 
-Credit is due to the following icon authors:
+Credit and thanks to the font authors:
 
-* <a href="https://freeicons.io/profile/823">Muhammad Haq</a> on <a href="https://freeicons.io">freeicons.io</a>
+  * [Pangolin license](/src/fonts/LICENSE.pangolin.txt)
+  * [Kanit license](/src/fonts/LICENSE.kanit.txt)
 
-* <a href="https://freeicons.io/profile/5790">ColourCreatype</a> on <a href="https://freeicons.io">freeicons.io</a>
+Credit and thanks to the icon authors:
 
-* <a href="https://freeicons.io/profile/3335">MD Badsha Meah</a> on <a href="https://freeicons.io">freeicons.io</a>
+* Thanks to [Icon King1](https://freeicons.io/profile/3) for the extension icon.
 
 ## <a id='source'>License</a>
 

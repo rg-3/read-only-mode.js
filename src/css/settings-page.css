@@ -1,15 +1,15 @@
+:root {
+  --twitter-blue: #55acee;
+}
+
 @font-face {
-  font-family: "Roboto Regular";
-  src: url('/fonts/pangolin-regular.ttf') format('truetype');
+  font-family: "Kanit Regular";
+  src: url('/fonts/kanit-regular.ttf') format('truetype');
 }
 
 @font-face {
   font-family: "Pangolin Regular";
   src: url('/fonts/pangolin-regular.ttf') format('truetype');
-}
-
-:root {
-  --twitter-blue: #55acee;
 }
 
 .container {
@@ -33,7 +33,6 @@ label.form-switch {
 }
 
 header {
-  font-family: "Roboto Regular";
   font-size: 15px;
   margin: 0px 0 20px 0px;
   background-color: var(--twitter-blue);
@@ -48,8 +47,9 @@ header a:link, a:visited, a:active, a:hover {
 }
 
 header .text {
+  font-family: "Anton Regular";
   color: #FFF;
-  margin: 8px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 20px;
 }
 
