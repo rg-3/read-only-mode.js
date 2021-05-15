@@ -12,7 +12,7 @@ export default function(disabled) {
         target = target.parentElement;
       }
      });
-  if(['followers', 'following', 'likes'].filter((path) => document.location.href.endsWith(path)).length === 0) {
+  if(['followers', 'following', 'likes', 'retweets'].filter((path) => document.location.href.endsWith(path)).length === 0) {
     toggleHide('div[data-testid=UserCell]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
   }
   toggleHide([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'});
