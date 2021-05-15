@@ -40,16 +40,30 @@ This extension isn't on any webstores (yet).
 
 **Source**
 
- * Clone a copy of the extension:
+A copy of Node.js and `yarn` are required to build.
 
-       git clone https://github.com/rg-3/twitter-mod.js
+* Clone a copy of the extension:
+
+      git clone https://github.com/rg-3/twitter-mod.js
+
+* Enter the cloned directory
+
+      cd twitter-mod.js
+
+* Run `yarn` to grab the dependencies:
+
+      yarn
+
+* Run `webpack` to build the extension:
+
+      yarn run webpack
 
 * Open `chrome://extensions` in your browser.
 
-* Enable the `Developer mode` checkbox.
+* Enable the `Developer mode` checkbox if you haven't already.
 
 * Click the `Load unpacked extension` button and point it at
-  the `src/` directory in the cloned repository.
+  the `build/` directory in the cloned repository.
 
 * Done.
 
