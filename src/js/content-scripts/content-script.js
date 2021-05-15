@@ -51,6 +51,25 @@ const tag = (els, {when, finder = 'all', tag = 'scale-zero'}) => {
   }
 };
 
+const hideWhoToFollow = (disabled) => {
+  let spans = Array.from(document.querySelectorAll('span'));
+  spans
+    .filter((el) => ['Who to follow'].includes(el.textContent))
+    .forEach((el) => {
+      let target = el;
+      let targetDepth = 5;
+      for(let i = 0; i < targetDepth; i++) {
+        tag([target.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
+        target = target.parentElement;
+      }
+     });
+  if(['followers', 'following'].filter((path) => document.location.href.endsWith(path)).length === 0) {
+    tag('div[data-testid=UserCell]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
+  }
+  tag([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'});
+  tag('div[data-testid=primaryColumn] a[href^="/i/connect"]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
+}
+
 setInterval(() => {
   chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
     /* compose */
@@ -73,7 +92,7 @@ setInterval(() => {
     /* trends */
     tag('div[aria-label="Timeline: Trending now"]', {when: disabled.includes('trendingNow'), tag: 'display-none'})
     /* who to follow */
-    tag([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
+    hideWhoToFollow(disabled);
   });
 }, 250);
 
