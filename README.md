@@ -46,7 +46,7 @@ A copy of Node.js and `yarn` are required to build.
 
       git clone https://github.com/rg-3/twitter-mod.js
 
-* Enter the cloned directory
+* Enter the cloned directory:
 
       cd twitter-mod.js
 
