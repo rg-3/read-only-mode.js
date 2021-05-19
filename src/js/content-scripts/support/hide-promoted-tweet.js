@@ -1,12 +1,12 @@
-import toggleHide from '../support/toggle-hide.js';
+import toggle from '../support/toggle.js';
 
 export default function(disabled) {
   let spans = Array.from(document.querySelectorAll('span'));
   spans
     .filter((el) => el.textContent === "Promoted")
     .forEach((el) => {
-      toggleHide([el], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
-      toggleHide([el.closest('div[data-testid=tweet')], {when: disabled.includes('promotedTweet'), tag: 'display-none'});
+      toggle([el], disabled.includes('promotedTweet'), 'display-none');
+      toggle([el.closest('div[data-testid=tweet')], disabled.includes('promotedTweet'), 'display-none');
     });
   spans
     .filter((el) => el.textContent === "Promoted Tweet")
@@ -14,7 +14,7 @@ export default function(disabled) {
       let target = el;
       let targetDepth = 5;
       for(let i = 0; i < targetDepth; i++) {
-        toggleHide([target], {when: disabled.includes('promotedTweet'), tag: 'display-none'})
+        toggle([target], disabled.includes('promotedTweet'), 'display-none')
         target = target.parentElement;
       }
     });

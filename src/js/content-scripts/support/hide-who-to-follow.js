@@ -1,7 +1,12 @@
-import toggleHide from '../support/toggle-hide.js';
+import toggle from '../support/toggle.js';
 
 const ignoredPaths = [
-  '/followers', '/following', '/likes', '/retweets', '/timeline'
+  /\/followers$/,
+  /\/following$/,
+  /\/likes$/,
+  /\/retweets$/,
+  /\/timeline$/,
+  /^\/settings\//,
 ];
 
 const headerText = [
@@ -16,7 +21,7 @@ const removeHeader = (disabled) => {
       let target = span;
       let targetDepth = 5;
       for(let i = 0; i < targetDepth; i++) {
-        toggleHide([target], {when: disabled.includes('whoToFollow'), tag: 'display-none'})
+        toggle([target], disabled.includes('whoToFollow'), 'display-none')
         target = target.parentElement;
       }
     }
@@ -26,9 +31,21 @@ const removeHeader = (disabled) => {
 export default function(disabled) {
   removeHeader(disabled);
   /* Skip other contexts where we don't want to remove UserCell nodes */
-  if(!ignoredPaths.filter((path) => document.location.href.endsWith(path)).length) {
-    toggleHide('div[data-testid=UserCell]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
+  if(!ignoredPaths.filter((path) => path.test(document.location.pathname)).length) {
+    toggle(
+      document.querySelectorAll('div[data-testid=UserCell]'),
+      disabled.includes('whoToFollow'),
+      'display-none'
+    );
   }
-  toggleHide([document.querySelector('aside[aria-label="Who to follow"]')?.parentElement], {when: disabled.includes('whoToFollow'), tag: 'display-none'});
-  toggleHide('div[data-testid=primaryColumn] a[href^="/i/connect"]', {when: disabled.includes('whoToFollow'), tag: 'display-none'});
+  toggle(
+    [document.querySelector('aside[aria-label="Who to follow"]')?.parentElement],
+    disabled.includes('whoToFollow'),
+    'display-none'
+  )
+  toggle(
+    document.querySelectorAll('div[data-testid=primaryColumn] a[href^="/i/connect"]'),
+    disabled.includes('whoToFollow'),
+    'display-none'
+  )
 }
