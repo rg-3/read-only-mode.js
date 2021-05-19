@@ -1,4 +1,4 @@
-import toggle from '../support/toggle.js';
+import toggle from './toggle.js';
 
 const ignoredPaths = [
   /\/followers$/,
@@ -30,7 +30,6 @@ const removeHeader = (disabled) => {
 
 export default function(disabled) {
   removeHeader(disabled);
-  /* Skip other contexts where we don't want to remove UserCell nodes */
   if(!ignoredPaths.filter((path) => path.test(document.location.pathname)).length) {
     toggle(
       document.querySelectorAll('div[data-testid=UserCell]'),
@@ -42,10 +41,10 @@ export default function(disabled) {
     [document.querySelector('aside[aria-label="Who to follow"]')?.parentElement],
     disabled.includes('whoToFollow'),
     'display-none'
-  )
+  );
   toggle(
     document.querySelectorAll('div[data-testid=primaryColumn] a[href^="/i/connect"]'),
     disabled.includes('whoToFollow'),
     'display-none'
-  )
+  );
 }

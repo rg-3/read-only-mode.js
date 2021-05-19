@@ -1,6 +1,6 @@
 import toggle from './support/toggle.js';
-import hideWhoToFollow from './support/hide-who-to-follow.js';
-import hidePromotedTweet from './support/hide-promoted-tweet.js';
+import toggleWhoToFollow from './support/toggle-who-to-follow.js';
+import togglePromotedTweet from './support/toggle-promoted-tweet.js';
 
 setInterval(() => {
   chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
@@ -23,28 +23,28 @@ setInterval(() => {
     toggle(
       document.querySelectorAll('div[data-testid="like"]'),
       disabled.includes('likes')
-    )
+    );
     /* retweets */
     toggle(
       document.querySelectorAll('div[data-testid="retweet"]'),
       disabled.includes('retweets')
-    )
+    );
     /* share tweet */
     toggle(
       document.querySelectorAll('div[aria-label="Share Tweet"]'),
       disabled.includes('shareTweet')
-    )
+    );
     /* tweet activity */
     toggle(
       document.querySelectorAll('a[aria-label="View Tweet activity"]'),
       disabled.includes('tweetActivity')
-    )
+    );
     /* follower count */
     toggle(
       [document.querySelector('a[href$="followers"][role="link"] span:first-child')],
       disabled.includes('followerCount'),
       'display-none'
-    )
+    );
     /* following count */
     toggle(
       [document.querySelector('a[href$="following"][role="link"] span:first-child')],
@@ -58,9 +58,9 @@ setInterval(() => {
       'display-none'
     );
     /* who to follow */
-    hideWhoToFollow(disabled);
+    toggleWhoToFollow(disabled);
     /* promoted tweets */
-    hidePromotedTweet(disabled);
+    togglePromotedTweet(disabled);
   });
 }, 250);
 
