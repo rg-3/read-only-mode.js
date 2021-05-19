@@ -13,7 +13,7 @@ const headerText = [
   'Who to follow'
 ];
 
-const removeHeader = (disabled) => {
+const toggleHeader = (disabled) => {
   const spans = document.querySelectorAll('span');
   for(let i = 0; i < spans.length; i++) {
     const span = spans[i];
@@ -29,7 +29,7 @@ const removeHeader = (disabled) => {
 };
 
 export default function(disabled) {
-  removeHeader(disabled);
+  toggleHeader(disabled);
   if(!ignoredPaths.filter((path) => path.test(document.location.pathname)).length) {
     toggle(
       document.querySelectorAll('div[data-testid=UserCell]'),
