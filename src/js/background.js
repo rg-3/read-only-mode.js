@@ -1,4 +1,4 @@
-import App from 'js/background/app.js';
+import App from './background/app.js';
 window.app = new App();
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {

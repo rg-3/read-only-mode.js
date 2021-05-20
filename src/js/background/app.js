@@ -1,4 +1,4 @@
-import Settings from 'js/background/app/settings.js';
+import Settings from './app/settings.js';
 
 export default function () {
   this.enabled = true;
