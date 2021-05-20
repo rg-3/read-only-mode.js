@@ -1,6 +1,6 @@
-import toggle from './support/toggle.js';
-import toggleWhoToFollow from './support/toggle-who-to-follow.js';
-import togglePromotedTweet from './support/toggle-promoted-tweet.js';
+import toggle from './content-script-helpers/toggle.js';
+import toggleWhoToFollow from './content-script-helpers/toggle-who-to-follow.js';
+import togglePromotedTweet from './content-script-helpers/toggle-promoted-tweet.js';
 
 setInterval(() => {
   chrome.runtime.sendMessage('get-disabled-features', (disabled) => {
