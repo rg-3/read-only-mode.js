@@ -14,22 +14,8 @@
 
 .container {
   font-family: "Pangolin Regular";
-  height: 370px;
+  max-height: 370px;
   width: 345px;
-}
-
-#settings section {
-  font-size: 15px;
-  margin: 0 0 10px 0;
-}
-
-.form-switch input[type='checkbox']:checked + .checkbox-switch {
-  background: var(--twitter-blue);
-  border-color: var(--twitter-blue);
-}
-
-label.form-switch {
-  cursor: pointer;
 }
 
 header {
@@ -40,7 +26,7 @@ header {
   font-weight: bold;
 }
 
-header a:link, a:visited, a:active, a:hover {
+header a:link, header a:visited, header a:active, header a:hover {
   display: block;
   color: #FFF;
   text-decoration: none;
@@ -51,6 +37,24 @@ header .text {
   color: #FFF;
   margin: 5px 0 0 0;
   font-size: 20px;
+}
+
+#settings section {
+  font-size: 15px;
+  margin: 0 0 10px 0;
+}
+
+#settings section:last-child {
+  margin-bottom: 0px;
+}
+
+.form-switch input[type='checkbox']:checked + .checkbox-switch {
+  background: var(--twitter-blue);
+  border-color: var(--twitter-blue);
+}
+
+label.form-switch {
+  cursor: pointer;
 }
 
 .small {
