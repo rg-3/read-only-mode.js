@@ -6,7 +6,7 @@ export default function (disabled) {
     const el = spans[i];
     if (el.textContent === 'Promoted' || el.textContent.startsWith('Promoted by')) {
       const tweet = el.closest('div[data-testid=tweet');
-      if(tweet) {
+      if (tweet) {
         toggle([el], disabled.includes('promotedTweet'), 'display-none');
         toggle([tweet], disabled.includes('promotedTweet'), 'display-none');
       }
