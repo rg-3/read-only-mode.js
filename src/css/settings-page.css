@@ -12,10 +12,13 @@
   src: url('/fonts/pangolin-regular.ttf') format('truetype');
 }
 
+html {
+  height: 370px;
+  width: 345px;
+}
+
 .container {
   font-family: "Pangolin Regular";
-  max-height: 370px;
-  width: 345px;
 }
 
 header {
