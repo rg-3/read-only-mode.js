@@ -76,6 +76,13 @@ Dependencies used while the extension is running:
 * [Spectre.css](https://picturepan2.github.io/spectre/)
   A Lightweight, Responsive and Modern CSS Framework.
 
+## Development
+
+This project is using [semistandard](https://github.com/standard/semistandard) as its linter.
+Run it with the following command:
+
+    yarn run linter
+
 ## Thanks
 
 Credit and thanks to the font authors:

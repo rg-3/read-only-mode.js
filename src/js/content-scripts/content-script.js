@@ -3,7 +3,7 @@ import toggleWhoToFollow from './support/toggle-who-to-follow.js';
 import togglePromotedTweet from './support/toggle-promoted-tweet.js';
 
 setInterval(() => {
-  chrome.runtime.sendMessage("get-disabled-features", (disabled) => {
+  chrome.runtime.sendMessage('get-disabled-features', (disabled) => {
     /* compose */
     toggle(
       [document.querySelector('div[data-testid="primaryColumn"] div[role="progressbar"]')?.parentElement],
@@ -75,7 +75,7 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 `;
   const el = document.createElement('style');
-  el.setAttribute('type', 'text/css')
+  el.setAttribute('type', 'text/css');
   el.innerText = stylesheet;
   document.head.appendChild(el);
 });

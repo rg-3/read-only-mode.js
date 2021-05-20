@@ -6,7 +6,7 @@ const ignoredPaths = [
   /\/likes$/,
   /\/retweets$/,
   /\/timeline$/,
-  /^\/settings\//,
+  /^\/settings\//
 ];
 
 const headerText = [
@@ -15,22 +15,22 @@ const headerText = [
 
 const toggleHeader = (disabled) => {
   const spans = document.querySelectorAll('span');
-  for(let i = 0; i < spans.length; i++) {
+  for (let i = 0; i < spans.length; i++) {
     const span = spans[i];
-    if(headerText.includes(span.textContent)) {
+    if (headerText.includes(span.textContent)) {
       let target = span;
-      let targetDepth = 5;
-      for(let i = 0; i < targetDepth; i++) {
-        toggle([target], disabled.includes('whoToFollow'), 'display-none')
+      const targetDepth = 5;
+      for (let i = 0; i < targetDepth; i++) {
+        toggle([target], disabled.includes('whoToFollow'), 'display-none');
         target = target.parentElement;
       }
     }
   }
 };
 
-export default function(disabled) {
+export default function (disabled) {
   toggleHeader(disabled);
-  if(!ignoredPaths.filter((path) => path.test(document.location.pathname)).length) {
+  if (!ignoredPaths.filter((path) => path.test(document.location.pathname)).length) {
     toggle(
       document.querySelectorAll('div[data-testid=UserCell]'),
       disabled.includes('whoToFollow'),

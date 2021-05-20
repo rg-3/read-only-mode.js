@@ -1,6 +1,6 @@
-import Settings from '/js/background/app/settings.js';
+import Settings from 'js/background/app/settings.js';
 
-export default function() {
+export default function () {
   this.enabled = true;
   this.localStorage = window.localStorage;
   this.settings = new Settings(this);

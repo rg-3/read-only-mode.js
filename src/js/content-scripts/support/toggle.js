@@ -1,5 +1,5 @@
 const tags = {
-  'scale-zero':   'data-twitter-mod-scale-zero',
+  'scale-zero': 'data-twitter-mod-scale-zero',
   'display-none': 'data-twitter-mod-display-none'
 };
 
@@ -9,21 +9,21 @@ const tags = {
   When the second argument is true a hide takes place.
   When the second argument is false a show takes place.
 */
-export default function(els, hidden, tag = 'scale-zero') {
-  tag  = tags[tag];
-  if(hidden) {
-    for(let i = 0; i < els.length; i++) {
+export default function (els, hidden, tag = 'scale-zero') {
+  tag = tags[tag];
+  if (hidden) {
+    for (let i = 0; i < els.length; i++) {
       const el = els[i];
-      if(!el || el.getAttribute(tag) === '1') { continue; }
-      el.setAttribute('data-twitter-mod', '1')
+      if (!el || el.getAttribute(tag) === '1') { continue; }
+      el.setAttribute('data-twitter-mod', '1');
       el.setAttribute(tag, '1');
     }
   } else {
-    for(let i = 0; i < els.length; i++) {
+    for (let i = 0; i < els.length; i++) {
       const el = els[i];
-      if(!el) { continue; }
+      if (!el) { continue; }
       el.removeAttribute('data-twitter-mod');
-      for(let k in tags) { el.removeAttribute(tags[k]) }
+      for (const k in tags) { el.removeAttribute(tags[k]); }
     }
   }
 }
