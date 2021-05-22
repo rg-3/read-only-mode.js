@@ -1,6 +1,7 @@
 import toggle from './content-script-helpers/toggle.js';
 import toggleWhoToFollow from './content-script-helpers/toggle-who-to-follow.js';
 import togglePromotedTweet from './content-script-helpers/toggle-promoted-tweet.js';
+import togglePromotedTopics from './content-script-helpers/toggle-promoted-topics.js';
 
 setInterval(() => {
   chrome.runtime.sendMessage('get-disabled-features', (disabled) => {
@@ -61,6 +62,8 @@ setInterval(() => {
     toggleWhoToFollow(disabled);
     /* promoted tweets */
     togglePromotedTweet(disabled);
+    /* promoted topics */
+    togglePromotedTopics(disabled);
   });
 }, 250);
 

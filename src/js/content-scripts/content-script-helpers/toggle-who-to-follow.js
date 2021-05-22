@@ -7,7 +7,7 @@ const ignoredPaths = [
   /\/retweets$/,
   /\/timeline$/,
   /^\/settings\//,
-  /^\/hashtag\//,
+  /^\/hashtag\//
 ];
 
 const headerText = [

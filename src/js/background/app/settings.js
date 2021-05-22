@@ -10,6 +10,7 @@ export default function (app) {
     'compose',
     'whoToFollow',
     'trendingNow',
+    'promotedTopics',
     'promotedTweet'
   ]);
 
