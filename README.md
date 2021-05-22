@@ -9,6 +9,8 @@
 * <a href='#introduction'>Introduction</a>
 * <a href='#screenshots'>Screenshots</a>
 * <a href='#install'>Install</a>
+* <a href='#dependencies'>Dependencies</a>
+* <a href='#development'>Development</a>
 * <a href='#license'>License</a>
 
 ## <a id='introduction'>Introduction</a>
@@ -78,10 +80,27 @@ Dependencies used while the extension is running:
 
 ## Development
 
-This project is using [semistandard](https://github.com/standard/semistandard) as its linter.
-Run it with the following command:
+## <a id='development'>Development</a>
 
-    yarn run linter
+*Build*
+
+Every time you make a change you should run `yarn run webpack` to rebuild
+your changes in the `build/` directory. You might also need to reload the 
+extension in Chrome after this step.
+
+*Linter*
+
+[node.js](https://nodejs.org/) and [yarn](https://yarnpkg.com/) are used to 
+run the [semistandard](https://github.com/standard/semistandard) linter across the 
+javascript source files. In order to run the linter, you can do as follows:
+
+* First step, install the dependencies:
+
+      yarn
+
+* Then run the linter:
+
+      yarn run linter
 
 ## Thanks
 
