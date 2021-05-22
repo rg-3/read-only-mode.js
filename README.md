@@ -79,8 +79,6 @@ Dependencies used while the extension is running:
 * [Spectre.css](https://picturepan2.github.io/spectre/)
   A Lightweight, Responsive and Modern CSS Framework.
 
-## Development
-
 ## <a id='development'>Development</a>
 
 *Build*
