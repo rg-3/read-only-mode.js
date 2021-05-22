@@ -42,7 +42,8 @@ This extension isn't on any webstores (yet).
 
 **Source**
 
-A copy of Node.js and `yarn` are required to build.
+A copy of [node.js](https://nodejs.org) and [yarn](https://yarnpkg.com/) 
+are required to build.
 
 * Clone a copy of the extension:
 
