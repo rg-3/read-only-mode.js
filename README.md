@@ -19,8 +19,8 @@ twitter-mod.js is an extension for Chromium-derived (eg Chrome) browsers.
 The extension can modify the Twitter website to show or hide certain features
 from its user interface.
 
-For example, you can hide suggested users, topics, and trends in the sidebar
-and on your timeline which removes interrupting content. It's also possible to
+You can hide suggested users, topics, and trends in the sidebar and on your 
+timeline which removes interrupting content. It's also possible to
 hide the follower and following count from profile pages, or create a read-only 
 version of the Twitter website. The experience you create depends on the settings 
 you choose.
