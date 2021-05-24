@@ -52,9 +52,10 @@ setInterval(() => {
       disabled.includes('followingCount'),
       'display-none'
     );
-    /* trends */
+    /* sidebar trends */
+    const sections = Array.from(document.querySelectorAll('div[data-testid=sidebarColumn] section[role=region]'));
     toggle(
-      document.querySelectorAll('div[aria-label="Timeline: Trending now"]'),
+      sections.slice(0),
       disabled.includes('trendingNow'),
       'display-none'
     );

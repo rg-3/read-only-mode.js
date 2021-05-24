@@ -2,8 +2,9 @@ import toggle from './toggle.js';
 
 export default function (disabled) {
   /* Toggles sidebar "Topics to follow" */
+  const sections = Array.from(document.querySelectorAll('div[data-testid=sidebarColumn] section[role=region]'));
   toggle(
-    [document.querySelector('[aria-labelledby="accessible-list-2"]')],
+    sections.slice(1),
     disabled.includes('promotedTopics'),
     'display-none'
   );
