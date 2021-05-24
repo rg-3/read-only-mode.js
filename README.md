@@ -21,7 +21,7 @@ from its user interface.
 
 You can hide suggested users, topics, and trends in the sidebar and on your 
 timeline which removes interrupting content. It's also possible to
-hide the follower and following count from profile pages, or create a read-only 
+hide the follower and following count on profile pages, or create a read-only 
 version of the Twitter website. The experience you create depends on the settings 
 you choose.
 
