@@ -1,0 +1,11 @@
+= HEAD
+
+* Add src/images/icon256.png
+
+* Add src/images/icon128.png
+
+* Remove src/images/icon128.svg
+
+= v0.1.0
+
+* First release
