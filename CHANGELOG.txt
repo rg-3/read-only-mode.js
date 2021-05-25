@@ -1,5 +1,9 @@
 = HEAD
 
+* No changes so far.
+
+= v0.1.1
+
 * Add src/images/icon256.png
 
 * Add src/images/icon128.png

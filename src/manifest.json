@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "twitter-mod",
   "description": "This extension can show or hide certain features on the Twitter website.",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "permissions": [],
   "icons": {"128": "images/icon128.png"},
   "background": {"page": "html/background.html"},
