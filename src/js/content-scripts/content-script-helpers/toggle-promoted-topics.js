@@ -38,5 +38,5 @@ export default function (disabled) {
     document.querySelectorAll('div[data-testid=primaryColumn] div[aria-label="Timeline: Carousel"]'),
     disabled.includes('promotedTopics'),
     'display-none'
-  )
+  );
 }

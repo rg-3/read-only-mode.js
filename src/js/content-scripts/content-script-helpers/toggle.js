@@ -9,7 +9,7 @@ const strategies = {
   When the second argument is true a hide takes place.
   When the second argument is false a show takes place.
 */
-export default function (els, hidden, strategy= 'scale-zero') {
+export default function (els, hidden, strategy = 'scale-zero') {
   strategy = strategies[strategy];
   if (hidden) {
     for (let i = 0; i < els.length; i++) {
