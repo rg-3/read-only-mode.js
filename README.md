@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="/src/images/icon128.png" alt="logo">
+  <img src="/src/images/icon258.png" alt="logo">
   <br>
   <h1 align="center">twitter-mod.js</h1>
 </p>
