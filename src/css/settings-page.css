@@ -18,7 +18,7 @@ html {
 }
 
 .container {
-  font-family: "Pangolin Regular";
+  font-family: "Kanit Regular";
 }
 
 header {
@@ -36,7 +36,6 @@ header a:link, header a:visited, header a:active, header a:hover {
 }
 
 header .text {
-  font-family: "Anton Regular";
   color: #FFF;
   margin: 5px 0 0 0;
   font-size: 20px;

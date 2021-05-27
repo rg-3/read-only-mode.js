@@ -1,6 +1,8 @@
-= HEAD
+= v0.2.0
 
-* No changes so far.
+* Set default font to Kanit Regular
+
+* Remove pangolin font
 
 = v0.1.1
 
